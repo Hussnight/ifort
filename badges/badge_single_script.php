@@ -21,18 +21,11 @@ $badges = $query->fetchAll(PDO::FETCH_ASSOC);
          
 
 
-// Message d'erreur si on ne trouve pas l'employé
+// Redirection vers la liste si on ne trouve pas le badge
  if($badges === false){
-     http_response_code(404); ?>
-     <h1>404. NOT FOUND<br> Redirection en cours...</h1>
-    <script>
-        setTimeout(function() => {
-
-            windows.location = 'badge_list.php';
-            
-        }, 1000);
-    </script> 
-<?php //die();
+  header('Location: badge_list.php');
+    
+ 
  }
 
  $errors = [];

@@ -15,19 +15,10 @@ $query->bindValue(':id',$id ,PDO::PARAM_INT);
 $query->execute();
 $cles = $query->fetch(PDO::FETCH_ASSOC);
 
-// Message d'erreur si on ne trouve pas la clé
+// Redirection vers la liste si on ne trouve pas la clé
 if($cles === false){
-    http_response_code(404); ?>
-    <h1>404. NOT FOUND<br> Redirection en cours...</h1>
-   <script>
-       setTimeout(function() => {
-
-           windows.location = 'employe_list.php';
-           
-       }, 1000);
-   </script> 
-<?php //die();
-}
+    header('Location: cle_list.php');
+   }
 
 $errors = [];
 
