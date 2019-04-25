@@ -1,0 +1,92 @@
+
+h1{
+    margin: 20px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.container{
+    margin-top: 50px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    
+}
+
+nav>ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+nav{
+    width: 100%;
+}
+
+.submenu{
+    display: none;
+}
+
+li{
+    padding: 10px;
+}
+
+
+nav>ul>li{
+    position: relative;
+
+}
+
+nav li{
+    list-style-type: none;
+}
+
+nav > ul::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
+nav li:hover .submenu{
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    padding: 0px;
+    z-index: 100000;
+}
+
+.submenu li{
+    border-bottom: 1px solid #CCC;
+}
+
+.submenu li a{
+    padding: 15px 30px; 
+    font-size: 13px;
+    color: #222538; 
+    width: 270px;
+
+}
+
+.nav-item:hover{
+    border-top: 2px solid grey;
+    background-color:lightsteelblue;
+}
+
+.badges:hover{
+    border-top: 2px solid grey;
+    background-color:lightsteelblue;
+
+}
+
+.cles:hover{
+    border-top: 2px solid grey;
+    background-color:lightsteelblue;
+
+}
+
+nav>ul>li:hover a{
+    padding: 15px 30px 20px 30px;
+}
+
+.employes .submenu{
+    background-color: red;
+}
+
