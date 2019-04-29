@@ -81,8 +81,7 @@
         <th><?php echo $employeHasBadge['numero_badge'] ?></th>
         </tr>  
         <?php } ?>
-<?php var_dump($employeHasBadges[0]); ?>
-        
+<?php var_dump($employeHasBadges); ?>        
 
 
  

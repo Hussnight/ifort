@@ -61,12 +61,13 @@ require_once 'employes_has_badges_script.php';
         <select class="form-control" type="text" name="id_employe" id="id_employe">
             <option> - </option>
             <?php //foreach($employeHasBadges as $employeHasBadge){ ?>
-            <?php //if($employeHasBadges[0] || $employeHasBadges[1] || $employeHasBadges[2] ){ ?>
-            <option class="form-control" name="id_employe" id="id_employe">Dupont Norbert <?php //echo $employeHasBadges[0]['numero_badge']; ?></option>
-            <option class="form-control" name="id_employe" id="id_employe">Agouni Hocine  <?php //echo $employeHasBadges[1]['numero_badge']; ?></option>
-            <option class="form-control" name="id_employe" id="id_employe">Dubois Kévin   <?php //echo $employeHasBadges[2]['numero_badge']; ?></option>
-            <?php //} else {echo ' - ';} ?>
-            <?php //} ?>
+            <?php //if($employeHasBadge['name'] == 'Dupont'){ ?>
+            <option class="form-control" name="id_employe" id="id_employe">Dupont Norbert<?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['name'] == 'Dupont'){ echo ' - '.$employeHasBadge['numero_badge'];} else if(empty($employeHasBadge['name'])){ echo "Dupont Norbert";} } ?></option>
+            <?php //if($employeHasBadge['name'] == 'Agouni'){ ?>
+            <option class="form-control" name="id_employe" id="id_employe">Agouni Hocine<?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['name'] == 'Agouni'){ echo ' - '.$employeHasBadge['numero_badge'];} else if(empty($employeHasBadge['name'])){ echo "Agouni Hocine";} } ?></option>
+            <?php //if($employeHasBadge['name'] == 'Dubois'){ ?>
+            <option class="form-control" name="id_employe" id="id_employe">Dubois Kévin<?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['name'] == 'Dubois'){ echo ' - '.$employeHasBadge['numero_badge'];} else if(empty($employeHasBadge['name'])){ echo "Dubois Kévin";} } ?></option>
+            <?php //}  ?>
         </select><br>          
         <?php if(isset($errors['id_employe'])) {?>
             <div class="alert alert-danger"> <strong> <?php echo $errors['id_employe'] ?> </strong> 
@@ -79,12 +80,13 @@ require_once 'employes_has_badges_script.php';
         <select class="form-control" type="text" name="id_badge" id="id_badge">
             <option> - </option>
             <?php //foreach($employeHasBadges as $employeHasBadge){ ?>
-            <?php  //if($employeHasBadges[0] || $employeHasBadges[1] || $employeHasBadges[2] ){ ?>
-            <option class="form-control" name="id_badge" id="id_badge">123 <?php //echo $employeHasBadges[0]['name']; ?></option>
-            <option class="form-control" name="id_badge" id="id_badge">456 <?php //echo $employeHasBadges[1]['name']; ?></option>
-            <option class="form-control" name="id_badge" id="id_badge">789 <?php //echo $employeHasBadges[2]['name']; ?></option>
-            <?php //}else {echo ' - ';} ?>
-            <?php //} ?>
+            <?php  //if($employeHasBadge['numero_badge'] == "123"){ ?>
+            <option class="form-control" name="id_badge" id="id_badge">123 <?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['numero_badge'] == "123"){ echo ' - '.$employeHasBadge['name'] . ' ' . $employeHasBadge['firstname'];} else if(empty($employeHasBadge['numero_badge'])){ echo "123"; } }?></option>
+            <?php  //if($employeHasBadge['numero_badge'] == "456"){ ?>
+            <option class="form-control" name="id_badge" id="id_badge">456 <?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['numero_badge'] == "456"){ echo ' - '.$employeHasBadge['name'] . ' ' . $employeHasBadge['firstname'];} else if(empty($employeHasBadge['numero_badge'])){ echo "456"; } }?></option>
+            <?php  //if($employeHasBadge['numero_badge'] == "789"){ ?>
+            <option class="form-control" name="id_badge" id="id_badge">789 <?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['numero_badge'] == "789"){ echo ' - '.$employeHasBadge['name'] . ' ' . $employeHasBadge['firstname'];} else if(empty($employeHasBadge['numero_badge'])){ echo "789"; } }?></option>
+            <?php //}?>
         </select><br>          
           
         <?php if(isset($errors['id_badge'])) {?>
@@ -99,6 +101,8 @@ require_once 'employes_has_badges_script.php';
                 echo '<pre>';
                 var_dump($idEmploye); 
                 var_dump($idBadge); 
+                var_dump($employeHasBadges); 
+
                 
             ?>
     </form>
@@ -112,3 +116,4 @@ require_once 'employes_has_badges_script.php';
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 </body>
 </html>
+

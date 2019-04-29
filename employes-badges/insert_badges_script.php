@@ -70,6 +70,7 @@ if(!empty($_POST)){
 
 
 
+
     foreach($employeHasBadges as $employeHasBadge){
       if($employeHasBadge['name'] == "Dupont" && $idEmploye == 1){
 
