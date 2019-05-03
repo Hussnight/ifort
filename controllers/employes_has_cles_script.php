@@ -1,5 +1,5 @@
 <?php
-require '../database/database.php';
+require '../model/database.php';
 session_start();
 $response = $db->query('SELECT e.id, e.name, e.firstname, c.numero_cle 
                         FROM `cle_employee` ce 

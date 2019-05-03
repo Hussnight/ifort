@@ -1,5 +1,5 @@
 <?php 
-require '../database/database.php';
+require '../model/database.php';
 require 'employes_has_cles_script.php';
 
 // session_start();

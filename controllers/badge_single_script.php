@@ -1,6 +1,6 @@
 <?php
 // Inclusion du fichier database.php
-require '../database/database.php';
+require '../model/database.php';
 session_start();
 
 

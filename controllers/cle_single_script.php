@@ -1,6 +1,6 @@
 <?php
 // Inclusion du fichier database
-require '../database/database.php';
+require '../model/database.php';
 
 // Récupération de l'id dans l'url
 if(isset($_GET['id'])){

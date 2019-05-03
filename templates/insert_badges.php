@@ -1,6 +1,6 @@
 <?php 
-require_once 'insert_badges_script.php';
-require_once 'employes_has_badges_script.php';
+require_once '../controllers/insert_badges_script.php';
+require_once '../controllers/employes_has_badges_script.php';
  ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,33 +16,37 @@ require_once 'employes_has_badges_script.php';
 <body>
 <header>
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="#">IFORT</a>
+  <a class="navbar-brand" href="badge.php">IFORT</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav">
-      <li class="nav-item active">Employés
-        <ul class="submenu">
-          <li><a class="nav-link" href="../index.php">Ajouter un employé <span class="sr-only">(current)</span></a></li>
-          <li><a class="nav-link" href="../employes/employe_list.php">Liste des employés</a></li>
-        </ul>
-      </li>
+      <ul class="navbar-nav">
+        
+          <li class="nav-item active">Employés
+            <ul class="submenu">
+              <li><a class="nav-link" href="../index.php">Ajouter un employé<span class="sr-only">(current)</span></a></li>
+              <li><a class="nav-link" href="../employes/employe_list.php">Liste des employés</a></li>
+            </ul>
+          </li>
+        
       <li class="nav-item">Badges
         <ul class="submenu">
-          <li><a class="nav-link" href="../badges/badge.php">Ajouter un badge</a></li>
-          <li><a class="nav-link" href="../badges/badge_list.php">Liste des badges</a></li>
-          <li><a class="nav-link" href="employes_has_badges.php">Liste des employés ayant un badge</a></li>
-          <li><a class="nav-link" href="insert_badges.php">Associer un badge à un employé</a></li>
+          <li><a class="nav-link" href="./badge.php">Ajouter un badge</a></li>
+          <li><a class="nav-link" href="./badge_list.php">Liste des badges</a></li>
+          <li><a class="nav-link" href="./employes_has_badges.php">Liste des employés ayant un badge</a></li>
+          <li><a class="nav-link" href="../employes-badges/insert_badges.php">Associer un badge à un employé</a></li>
         </ul>
       </li>
       <li class="nav-item">Clés
         <ul class="submenu">
-          <li><a class="nav-link" href="../cles/cle.php">Ajouter une clé</a></li>
-          <li><a class="nav-link" href="../cles/cle_list.php">Liste des clés</a></li>
-          <li><a class="nav-link" href="../employes-cles/employes_has_cles.php">Liste des employés ayant une clé</a></li>
-          <li><a class="nav-link" href="../employes-cles/insert_cles.php">Associer une clé à un employé</a></li>
+          <li><a class="nav-link" href="./cle.php">Ajouter une clé</a></li>
+          <li><a class="nav-link" href="./cle_list.php">Liste des clés</a></li>
+          <li><a class="nav-link" href="./employes_has_cles.php">Liste des employés ayant une clé</a></li>
+          <li><a class="nav-link" href="./insert_cles.php">Associer une clé à un employé</a></li>
         </ul>
+      </li>
+      
     </ul>
   </div>
 </nav>
@@ -62,11 +66,11 @@ require_once 'employes_has_badges_script.php';
             <option> - </option>
             <?php //foreach($employeHasBadges as $employeHasBadge){ ?>
             <?php //if($employeHasBadge['name'] == 'Dupont'){ ?>
-            <option class="form-control" name="id_employe" id="id_employe">Dupont Norbert<?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['name'] == 'Dupont'){ echo ' - '.$employeHasBadge['numero_badge'];} else if(empty($employeHasBadge['name'])){ echo "Dupont Norbert";} } ?></option>
+            <option class="form-control" name="id_employe" id="id_employe">Dupont Norbert<?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['name'] == 'Dupont'){ echo ' - '.$employeHasBadge['numero_badge'];} /*else if(empty($employeHasBadge['name'])){ echo "Dupont Norbert";}*/ } ?></option>
             <?php //if($employeHasBadge['name'] == 'Agouni'){ ?>
-            <option class="form-control" name="id_employe" id="id_employe">Agouni Hocine<?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['name'] == 'Agouni'){ echo ' - '.$employeHasBadge['numero_badge'];} else if(empty($employeHasBadge['name'])){ echo "Agouni Hocine";} } ?></option>
+            <option class="form-control" name="id_employe" id="id_employe">Agouni Hocine<?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['name'] == 'Agouni'){ echo ' - '.$employeHasBadge['numero_badge'];} /*else if(empty($employeHasBadge['name'])){ echo "Agouni Hocine";}*/ } ?></option>
             <?php //if($employeHasBadge['name'] == 'Dubois'){ ?>
-            <option class="form-control" name="id_employe" id="id_employe">Dubois Kévin<?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['name'] == 'Dubois'){ echo ' - '.$employeHasBadge['numero_badge'];} else if(empty($employeHasBadge['name'])){ echo "Dubois Kévin";} } ?></option>
+            <option class="form-control" name="id_employe" id="id_employe">Dubois Kévin<?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['name'] == 'Dubois'){ echo ' - '.$employeHasBadge['numero_badge'];} /*else if(empty($employeHasBadge['name'])){ echo "Dubois Kévin";}*/ } ?></option>
             <?php //}  ?>
         </select><br>          
         <?php if(isset($errors['id_employe'])) {?>
@@ -81,11 +85,11 @@ require_once 'employes_has_badges_script.php';
             <option> - </option>
             <?php //foreach($employeHasBadges as $employeHasBadge){ ?>
             <?php  //if($employeHasBadge['numero_badge'] == "123"){ ?>
-            <option class="form-control" name="id_badge" id="id_badge">123 <?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['numero_badge'] == "123"){ echo ' - '.$employeHasBadge['name'] . ' ' . $employeHasBadge['firstname'];} else if(empty($employeHasBadge['numero_badge'])){ echo "123"; } }?></option>
+            <option class="form-control" name="id_badge" id="id_badge">123 <?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['numero_badge'] == "123"){ echo ' - '.$employeHasBadge['name'] . ' ' . $employeHasBadge['firstname'];} /*else if(empty($employeHasBadge['numero_badge'])){ echo "123"; }*/ }?></option>
             <?php  //if($employeHasBadge['numero_badge'] == "456"){ ?>
-            <option class="form-control" name="id_badge" id="id_badge">456 <?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['numero_badge'] == "456"){ echo ' - '.$employeHasBadge['name'] . ' ' . $employeHasBadge['firstname'];} else if(empty($employeHasBadge['numero_badge'])){ echo "456"; } }?></option>
+            <option class="form-control" name="id_badge" id="id_badge">456 <?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['numero_badge'] == "456"){ echo ' - '.$employeHasBadge['name'] . ' ' . $employeHasBadge['firstname'];} /*else if(empty($employeHasBadge['numero_badge'])){ echo "456"; }*/ }?></option>
             <?php  //if($employeHasBadge['numero_badge'] == "789"){ ?>
-            <option class="form-control" name="id_badge" id="id_badge">789 <?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['numero_badge'] == "789"){ echo ' - '.$employeHasBadge['name'] . ' ' . $employeHasBadge['firstname'];} else if(empty($employeHasBadge['numero_badge'])){ echo "789"; } }?></option>
+            <option class="form-control" name="id_badge" id="id_badge">789 <?php foreach($employeHasBadges as $employeHasBadge){ if($employeHasBadge['numero_badge'] == "789"){ echo ' - '.$employeHasBadge['name'] . ' ' . $employeHasBadge['firstname'];} /*else if(empty($employeHasBadge['numero_badge'])){ echo "789"; }*/ }?></option>
             <?php //}?>
         </select><br>          
           

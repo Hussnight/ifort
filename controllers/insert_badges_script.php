@@ -1,6 +1,6 @@
 <?php 
 
-require '../database/database.php';
+require '../model/database.php';
 require_once 'employes_has_badges_script.php';
 // session_start();
 
@@ -44,7 +44,7 @@ if(!empty($_POST)){
       $idEmploye = 3;
       // $doublons['id_employe'] = $idEmploye;
 
-    }else if($idEmploye == '-'){
+    }else if($idEmploye == '-' || $idEmploye == string){
       $errors['id_employe'] = 'Le nom de l\'employé n\'est pas renseigné ! ';
     }
     

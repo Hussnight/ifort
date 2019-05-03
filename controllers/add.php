@@ -1,4 +1,5 @@
 <?php 
+require '../model/database.php';
 
 
 // Traitement du formulaire
@@ -86,4 +87,3 @@ if(strlen($name) == 0){
 
 }  
 
-?>

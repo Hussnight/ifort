@@ -1,7 +1,7 @@
 <?php
 // Inclusion des fichiers database et add
-    require_once 'database/database.php';
-    require_once 'employes/add.php';
+    require_once './model/database.php';
+    require_once './controllers/add.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -24,24 +24,24 @@
         <li class="nav-item active">Employés
           <ul class="submenu">
             <li><a class="nav-link" href="index.php">Ajouter un employé <span class="sr-only">(current)</span></a></li>
-            <li><a class="nav-link" href="employes/employe_list.php">Liste des employés</a></li>
+            <li><a class="nav-link" href="./templates/employe_list.php">Liste des employés</a></li>
           </ul>
         </li>
         
         <li class="nav-item">Badges
           <ul class="submenu">
-            <li><a class="nav-link" href="./badges/badge.php">Ajouter un badge</a></li>
-            <li><a class="nav-link" href="../badges/badge_list.php">Liste des badges</a></li>
-            <li><a class="nav-link" href="employes-badges/employes_has_badges.php">Liste des employés ayant un badge</a></li>
-            <li><a class="nav-link" href="employes-badges/insert_badges.php">Associer un badge à un employé</a></li>
+            <li><a class="nav-link" href="./templates/badge.php">Ajouter un badge</a></li>
+            <li><a class="nav-link" href="./templates/badge_list.php">Liste des badges</a></li>
+            <li><a class="nav-link" href="./templates/employes_has_badges.php">Liste des employés ayant un badge</a></li>
+            <li><a class="nav-link" href="./templates/insert_badges.php">Associer un badge à un employé</a></li>
           </ul>
         </li>
         <li class="nav-item">clés
           <ul class="submenu">
-            <li><a class="nav-link" href="cles/cle.php">Ajouter une clé</a></li>
-            <li><a class="nav-link" href="cles/cle_list.php">Liste des clés</a></li>
-            <li><a class="nav-link" href="employes-cles/employes_has_cles.php">Liste des employés ayant une clé</a></li>
-            <li><a class="nav-link" href="employes-cles/insert_cles.php">Associer une clé à un employé</a></li>
+            <li><a class="nav-link" href="./templates/cle.php">Ajouter une clé</a></li>
+            <li><a class="nav-link" href="./templates/cle_list.php">Liste des clés</a></li>
+            <li><a class="nav-link" href="./templates/employes_has_cles.php">Liste des employés ayant une clé</a></li>
+            <li><a class="nav-link" href="./templates/insert_cles.php">Associer une clé à un employé</a></li>
           </ul>
         </li>
       </ul>

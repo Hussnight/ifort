@@ -1,6 +1,6 @@
 <?php 
 // Inclusion du fichier database
-require '../database/database.php';
+require '../model/database.php';
 
 // Traitement du formulaire
 $numBadge = null ;
