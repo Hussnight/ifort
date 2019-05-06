@@ -1,5 +1,5 @@
 <?php 
-require '../model/database.php';
+    require_once './model/database.php';
 
 
 // Traitement du formulaire
